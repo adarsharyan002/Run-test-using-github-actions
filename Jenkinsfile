@@ -6,7 +6,7 @@ pipeline {
             steps {
                 nodejs('Node'){
                 sh 'npm install'
-                sh 'npm run build'
+                
             }
             }
         }
@@ -14,6 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 nodejs('Node'){
+                sh 'npm start'
                 sh 'npm run test'
             }
             }
